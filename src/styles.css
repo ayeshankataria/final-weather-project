@@ -56,15 +56,16 @@ footer {
   color: #17a2b8;
   font-size: 2rem;
 }
+#temperature .active {
+  color: #454545;
+}
 #feels-like {
   font-size: 22px;
 }
 #description {
   font-size: 20px;
 }
-#celsius-change:hover {
-  text-decoration: none;
-}
+#celsius-change:hover ,
 #fahrenheit-change:hover {
   text-decoration: none;
 }
