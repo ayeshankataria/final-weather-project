@@ -42,9 +42,17 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#input-current-city");
+  console.log(cityInput.value);
+}
+
 let apiKey = "86f093aa43690ee890e5cd351bb4c53c";
 let city = "London";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-console.log(apiUrl);
 axios.get(apiUrl).then(displayTemperature);
+
+let form = document.querySelector(".form-place");
+form.addEventListener("submit", handleSubmit);
