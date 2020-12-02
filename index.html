@@ -15,20 +15,17 @@
 <body>
   <div class="container">
     <div class="weather-app">
-      <div class="row" id="search-bar">
-        <div class="col-10">
-          <form class="form-place">
-            <input type="location" class="form-control" id="input-current-city" placeholder="Enter city">
-          </form>
-        </div>
-        <div class="col-1">
-          <button type="submit" class="btn btn-outline-info"><i class="fas fa-search" id="search-input"></i></button>
-        </div>
-        <div class="col-1">
-          <button type="click" class="btn btn-outline-info"><i class="fas fa-map-marker-alt"
-              id="current-location"></i></button>
-        </div>
-      </div>
+        <form class="form-place">
+          <div class="row" id="search-bar">
+            <div class="col-9">
+              <input type="search" class="form-control" id="input-current-city" placeholder="Enter city">
+            </div>
+            <div class="col">
+              <input type="submit" class="btn btn-outline-info" value="Search" id="search-input"></input>
+                        <input type="button" class="btn btn-outline-info" value="Current location" id="current-location"></input>
+            </div>
+          </div>
+        </form>
       <div class="container">
         <br />
         <div class="row">
