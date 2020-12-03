@@ -29,20 +29,18 @@ footer {
   padding-bottom: 10px;
   padding-left: 15px;
 }
-.card {
-  width: 8rem;
-  color: #454545;
-  text-align: center;
-  border: none;
-}
-.card-title {
+
+.forecast-time {
   padding-top: 1.25rem;
+  text-align: center;
 }
 .fas {
   font-size: 45px;
+  display: block;
 }
-.card-text {
+.forecast-temp {
   padding-top: 15px;
+  text-align: center;
 }
 #search-bar {
   padding-bottom: 15px;
