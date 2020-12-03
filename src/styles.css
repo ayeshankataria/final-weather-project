@@ -23,20 +23,18 @@ footer {
 .weather-app {
   border: 2px solid #17a2b8;
   border-radius: 15px;
-  padding: 40px 0 40px 30px;
+  padding: 40px 30px;
 }
 .forecast {
   padding-bottom: 10px;
   padding-left: 15px;
 }
-
+.temp {
+  font-size: 65px;
+}
 .forecast-time {
   padding-top: 1.25rem;
   text-align: center;
-}
-.fas {
-  font-size: 45px;
-  display: block;
 }
 .forecast-temp {
   padding-top: 15px;
@@ -50,15 +48,20 @@ footer {
   font-size: 16px;
   width: fit-content;
 }
+#temp-convertor {
+  text-align: right;
+  font-size: 38px;
+  margin: 0 20px;
+}
 #temperature {
   color: #17a2b8;
   font-size: 2rem;
 }
-#temperature .active {
+#temperature .inactive {
   color: #454545;
 }
 #feels-like {
-  font-size: 18px;
+  font-size: 16px;
 }
 #description {
   font-size: 20px;
@@ -66,4 +69,9 @@ footer {
 #celsius-change:hover ,
 #fahrenheit-change:hover {
   text-decoration: none;
+}
+#forecast-icon {
+  height: 70px;
+  display: block;
+  margin: 0 auto;
 }
