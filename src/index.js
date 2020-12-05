@@ -45,6 +45,7 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
 
   celsiusTemperature = response.data.main.temp;
+  celsiusFeelsLike = response.data.main.feels_like;
 
   temperature.innerHTML = Math.round(celsiusTemperature);
   cityName.innerHTML = response.data.name;
@@ -52,7 +53,7 @@ function displayTemperature(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
-  feelsLike.innerHTML = Math.round(response.data.main.feels_like);
+  feelsLike.innerHTML = Math.round(celsiusFeelsLike);
   wind.innerHTML = Math.round(3.6*response.data.wind.speed);
   humidityElement.innerHTML = response.data.main.humidity;
 }
@@ -104,6 +105,9 @@ function displayFahrenheit(event) {
   fahrenheitChange.classList.remove("inactive");
   let fahrenheitTemperature = (celsiusTemperature*9)/5+32;
   temperature.innerHTML = Math.round(fahrenheitTemperature);
+  let feelsLike = document.querySelector("#feels-like");
+  let fahrenheitFeelsLike = (celsiusFeelsLike*9)/5+32;
+  feelsLike.innerHTML = Math.round(fahrenheitFeelsLike);
 }
 
 function displayCelsius(event) {
@@ -112,9 +116,12 @@ function displayCelsius(event) {
   fahrenheitChange.classList.add("inactive");
   celsiusChange.classList.remove("inactive");
   temperature.innerHTML = Math.round(celsiusTemperature);
+  let feelsLike = document.querySelector("#feels-like");
+  feelsLike.innerHTML = Math.round(celsiusFeelsLike);
 }
 
 let celsiusTemperature = null;
+let celsiusFeelsLike = null;
 
 let form = document.querySelector(".form-place");
 form.addEventListener("submit", handleSubmit);
