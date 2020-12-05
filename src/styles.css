@@ -70,7 +70,7 @@ footer {
 #fahrenheit-change:hover {
   text-decoration: none;
 }
-#forecast-icon {
+#forecast img {
   height: 70px;
   display: block;
   margin: 0 auto;
