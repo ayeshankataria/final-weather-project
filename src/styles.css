@@ -1,5 +1,8 @@
 body {
   margin: 20px auto;
+  background-image: url("../img/background.jpg");
+  background-size:     cover;
+  background-repeat:   no-repeat;
 }
 div {
   padding-left: 15px;
@@ -8,7 +11,7 @@ div {
 h1,
 h2,
 a {
-  color: #17a2b8;
+  color: #31314e;
 }
 
 li {
@@ -21,7 +24,7 @@ footer {
   padding-top: 25px;
 }
 .weather-app {
-  border: 2px solid #17a2b8;
+  border: 2px solid #31314e;
   border-radius: 15px;
   padding: 40px 30px;
 }
@@ -54,24 +57,32 @@ footer {
   margin: 0 20px;
 }
 #temperature {
-  color: #17a2b8;
+  color: #31314e;
   font-size: 2rem;
+  font-weight: bolder;
 }
 #temperature .inactive {
-  color: #454545;
-}
+font-weight: lighter;}
 #feels-like {
   font-size: 16px;
 }
 #description {
   font-size: 20px;
 }
+#icon {
+  height: 120px;
+}
 #celsius-change:hover ,
 #fahrenheit-change:hover {
   text-decoration: none;
+}
+#wind-speed ,
+#humidity {
+  color: #31314e;
 }
 #forecast img {
   height: 70px;
   display: block;
   margin: 0 auto;
+  color: #31314e;
 }
